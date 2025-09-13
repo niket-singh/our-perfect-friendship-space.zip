@@ -1361,3 +1361,50 @@ select.form-control {
               background-color var(--duration-fast) var(--ease-standard),
               border-color var(--duration-fast) var(--ease-standard);
 }
+
+/* 1) Soft theme tokens */
+:root {
+  --bg-1: #fff7fb;         /* blush pink */
+  --bg-2: #f6fbff;         /* ice blue */
+  --bg-3: #f5f2ff;         /* lavender mist */
+  --bg-angle: 135deg;
+  --surface: rgba(255, 255, 255, 0.80); /* soft card surface */
+  --surface-border: rgba(255, 255, 255, 0.55);
+  --text-strong: #2c3e50;
+  --text-muted: #6b7280;
+}
+
+/* 2) Page background */
+html, body {
+  min-height: 100%;
+}
+body {
+  background: linear-gradient(
+    var(--bg-angle),
+    var(--bg-1) 0%,
+    var(--bg-2) 50%,
+    var(--bg-3) 100%
+  );
+  color: var(--text-strong);
+}
+
+/* 3) Surfaces (apply to your cards/sections) */
+.app-header,
+.welcome-message,
+.friend-note,
+.complaint-form-container,
+.appreciation-section,
+.success-header,
+.success-messages {
+  background: var(--surface);
+  border: 1px solid var(--surface-border);
+  border-radius: 20px;
+}
+
+/* 4) Optional: slightly adjust for user color scheme */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --surface: rgba(255, 255, 255, 0.75);
+    --text-strong: #1f2937;
+  }
+}
