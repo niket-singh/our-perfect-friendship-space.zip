@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Safe Space 💕</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+</head>
+<body>
+    <!-- Main Page -->
+    <div id="main-page" class="page active">
+        <div class="container">
+            <header class="app-header">
+                <div class="photo-upload-section">
+                    <div class="photo-frame" id="photo-frame">
+                        <img id="uploaded-photo" class="uploaded-photo hidden" src="" alt="Our photo">
+                        <div id="photo-placeholder" class="photo-placeholder">
+                            <span class="camera-icon">📷</span>
+                            <span class="upload-text"><img src= "zappy and me.jpg" width="100" height="120">Here's our pic!</span>
+                        </div>
+                        <input type="file" id="photo-input" accept="image/*" class="photo-input">
+                    </div>
+                </div>
+                <h1 class="app-title">Your Safe Space 💕</h1>
+                <p class="app-subtitle">Because even the best friendships need a complaint department</p>
+            </header>
+
+            <div class="appreciation-section">
+                <h2>Things I genuinely appreciate about you ✨</h2>
+                <div class="appreciation-tiles">
+                    <div class="appreciation-tile" data-detail="0">
+                        <div class="tile-emoji">🧠</div>
+                        <div class="tile-title">Your brilliant mind</div>
+                    </div>
+                    <div class="appreciation-tile" data-detail="1">
+                        <div class="tile-emoji">🌟</div>
+                        <div class="tile-title">Your amazing perspective</div>
+                    </div>
+                    <div class="appreciation-tile" data-detail="2">
+                        <div class="tile-emoji">🗣️</div>
+                        <div class="tile-title">Your honest feedback</div>
+                    </div>
+                    <div class="appreciation-tile" data-detail="3">
+                        <div class="tile-emoji">😄</div>
+                        <div class="tile-title">Your sense of humor</div>
+                    </div>
+                    <div class="appreciation-tile" data-detail="4">
+                        <div class="tile-emoji">💫</div>
+                        <div class="tile-title">Your friendship</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="welcome-section">
+                <div class="welcome-message">
+                    <h2>Welcome to your judgment-free zone ✨</h2>
+                    <p>I genuinely want to hear what you're thinking, especially if it involves me doing something questionable (which, let's be honest, happens regularly). Your perspective means a lot to me, and I promise to take whatever you share seriously... even if I respond with terrible jokes first. 
+                        <br>So please, share whatever's on your mind. I promise to listen, learn, and probably only panic a little bit about how to respond appropriately</p>
+                </div>
+                
+                <div class="love-note">
+                    <h3>A note from your least favorite human 💌</h3>
+                    <p>I know I might not always express myself the way I should, and sometimes I probably say things that come off as rude or thoughtless. But please know that I never, ever intend to hurt you.</p>
+                    <p>I care about you more than I know how to show, and I genuinely love doing things that make you happy. You matter to me, and your feelings matter to me.</p>
+                    <p class="signature">- Your occasionally clueless but always caring dumbo</p>
+                </div>
+            </div>
+
+            <div class="complaint-form-container">
+                <h2>What's eating at you today? 🤔</h2>
+                
+                <form id="complaint-form" class="complaint-form">
+                    <div class="form-group">
+                        <label for="complaint-text" class="form-label">Let it all out, you amazing human ✍️</label>
+                        <textarea 
+                            id="complaint-text" 
+                            class="form-control complaint-textarea" 
+                            placeholder="What's on your mind? Let it all out... I'm listening 💗"
+                            rows="6"
+                            required
+                        ></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">How severe is this situation? 🎬</label>
+                        <div class="severity-scale">
+                            <div class="severity-options">
+                                <div class="severity-option">
+                                    <input type="radio" id="severity-1" name="severity" value="1" required>
+                                    <label for="severity-1">
+                                        <span class="severity-number">1</span>
+                                        <span class="severity-desc">Like that scene where the hero dramatically slips on a banana peel - stupid but somehow endearing</span>
+                                    </label>
+                                </div>
+                                <div class="severity-option">
+                                    <input type="radio" id="severity-2" name="severity" value="2">
+                                    <label for="severity-2">
+                                        <span class="severity-number">2</span>
+                                        <span class="severity-desc">Like missing each other at the airport - classic rom-com timing fail</span>
+                                    </label>
+                                </div>
+                                <div class="severity-option">
+                                    <input type="radio" id="severity-3" name="severity" value="3">
+                                    <label for="severity-3">
+                                        <span class="severity-number">3</span>
+                                        <span class="severity-desc">Like the heroine thinking the hero likes someone else when he obviously doesn't</span>
+                                    </label>
+                                </div>
+                                <div class="severity-option">
+                                    <input type="radio" id="severity-4" name="severity" value="4">
+                                    <label for="severity-4">
+                                        <span class="severity-number">4</span>
+                                        <span class="severity-desc">Like when they fight over something silly but both are too proud to apologize first</span>
+                                    </label>
+                                </div>
+                                <div class="severity-option">
+                                    <input type="radio" id="severity-5" name="severity" value="5">
+                                    <label for="severity-5">
+                                        <span class="severity-number">5</span>
+                                        <span class="severity-desc">Like the big misunderstanding in the second half that could be solved with one conversation</span>
+                                    </label>
+                                </div>
+                                <div class="severity-option">
+                                    <input type="radio" id="severity-6" name="severity" value="6">
+                                    <label for="severity-6">
+                                        <span class="severity-number">6</span>
+                                        <span class="severity-desc">Like when the families don't approve and create unnecessary drama</span>
+                                    </label>
+                                </div>
+                                <div class="severity-option">
+                                    <input type="radio" id="severity-7" name="severity" value="7">
+                                    <label for="severity-7">
+                                        <span class="severity-number">7</span>
+                                        <span class="severity-desc">Like the hero making a grand gesture that completely backfires</span>
+                                    </label>
+                                </div>
+                                <div class="severity-option">
+                                    <input type="radio" id="severity-8" name="severity" value="8">
+                                    <label for="severity-8">
+                                        <span class="severity-number">8</span>
+                                        <span class="severity-desc">Like the dramatic scene where someone overhears half a conversation and gets the wrong idea</span>
+                                    </label>
+                                </div>
+                                <div class="severity-option">
+                                    <input type="radio" id="severity-9" name="severity" value="9">
+                                    <label for="severity-9">
+                                        <span class="severity-number">9</span>
+                                        <span class="severity-desc">Like the climax where everything falls apart before the happy ending</span>
+                                    </label>
+                                </div>
+                                <div class="severity-option">
+                                    <input type="radio" id="severity-10" name="severity" value="10">
+                                    <label for="severity-10">
+                                        <span class="severity-number">10</span>
+                                        <span class="severity-desc">Our universe is gonna get boom</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="anger-level" class="form-label">How mad are you right now? 😤</label>
+                        <select id="anger-level" class="form-control" required>
+                            <option value="">Choose your current mood...</option>
+                            <option value="0">😊 Not really mad, just saying</option>
+                            <option value="1">😐 Slightly annoyed</option>
+                            <option value="2">😒 Getting irritated</option>
+                            <option value="3">😠 Pretty mad actually</option>
+                            <option value="4">😤 Really frustrated</option>
+                            <option value="5">😡 Genuinely angry</option>
+                            <option value="6">🤬 FURIOUS</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="seriousness" class="form-label">How serious is this situation? 🚨</label>
+                        <select id="seriousness" class="form-control" required>
+                            <option value="">Select seriousness level...</option>
+                            <option value="0">It's fine, just needed to say it</option>
+                            <option value="1">Worth mentioning</option>
+                            <option value="2">We should probably talk</option>
+                            <option value="3">This needs attention</option>
+                            <option value="4">Houston, we have a problem</option>
+                            <option value="5">DEFCON 1 - Emergency meeting required</option>
+                        </select>
+                    </div>
+
+                    <div class="submit-section">
+                        <button type="submit" class="btn btn--primary btn--lg btn--full-width submit-btn">
+                            Send to your favorite dummy 💌
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Appreciation Detail Modal -->
+    <div id="appreciation-modal" class="modal hidden">
+        <div class="modal-backdrop"></div>
+        <div class="modal-content">
+            <button class="modal-close" id="modal-close">&times;</button>
+            <div class="modal-body">
+                <h3 id="modal-title"></h3>
+                <p id="modal-description"></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Submission Success Page -->
+    <div id="success-page" class="page hidden">
+        <div class="container">
+            <div class="success-content">
+                <h1 class="success-title">Your idiot friend will get to it in no time! 😅</h1>
+                
+                <div class="success-messages">
+                    <div class="success-message">
+                        <h3>Your feelings are valid and heard ❤️</h3>
+                        <p>Every word you wrote matters, and I'm grateful you took the time to share what's on your mind.</p>
+                    </div>
+                    
+                    <div class="success-message">
+                        <h3>Translation in progress... 🤖</h3>
+                        <p>Converting from "friend language" to "confused friend language"</p>
+                        <div class="loading-dots">
+                            <span></span><span></span><span></span>
+                        </div>
+                    </div>
+                    
+                    <div class="success-message">
+                        <h3>Plot twist: I'm probably already planning how to make it up to you 🎭</h3>
+                        <p>Because that's what people do when they care about someone amazing.</p>
+                    </div>
+                    
+                    <div class="reminder-note">
+                        <h3>Gentle reminder 💕</h3>
+                        <p>I value our friendship. Like, really value it. And I genuinely love doing things that make you smile. Sometimes I'm just a little slow on the uptake, but my heart's in the right place.</p>
+                    </div>
+                </div>
+
+                <div class="action-buttons">
+                    <button id="new-complaint-btn" class="btn btn--secondary btn--lg">
+                        Got more to say? 📝
+                    </button>
+                    <button id="close-app-btn" class="btn btn--primary btn--lg">
+                        I feel better now 💗
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="app-footer">
+        <p class="disclaimer">Made with love by someone who cares about you more than they show ❤️</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
